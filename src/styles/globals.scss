@@ -105,3 +105,54 @@ a {
     color-scheme: dark;
   }
 }
+
+h1 {
+  font-size: 4em !important;
+  font-weight: normal !important;
+  margin-bottom: 0 !important;
+  margin-top: 3em !important;
+  @media (max-width: 767px) {
+    font-size: 2em !important;
+    margin-top: 1.5em !important;
+  }
+}
+
+h2 {
+  font-size: 1.7em !important;
+  font-weight: normal !important;
+  margin-top: 1.5em !important;
+  @media (max-width: 767px) {
+    font-size: 1.5em !important;
+    margin-top: 0.5em !important;
+  }
+}
+
+.page-visuality-status--computer {
+  @media (max-width: 767px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-visuality-status--mobile {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
