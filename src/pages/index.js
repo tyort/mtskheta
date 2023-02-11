@@ -122,8 +122,8 @@
 //   );
 // }
 
-import { createMedia } from '@artsy/fresnel';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   Button,
   Container,
@@ -137,14 +137,6 @@ import {
 
 import HomepageHeading from '../components/HomepageHeading';
 import HomepageLayout from '../components/HomepageLayout';
-
-const { MediaContextProvider, Media } = createMedia({
-  breakpoints: {
-    mobile: 0,
-    tablet: 768,
-    computer: 1024,
-  },
-});
 
 export default function ResponsiveContainer() {
   const [isFixedMenuShow, setShowFixedMenu] = useState(false);
@@ -161,9 +153,15 @@ export default function ResponsiveContainer() {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 700, padding: '1em 0em', background: 'none' }}
             vertical
           >
+            <Image
+              src='/images/title-fireplace.webp'
+              alt='грузинская печь'
+              fill
+              style={{ objectFit: 'cover', zIndex: -1 }}
+            />
             <Menu
               fixed={isFixedMenuShow ? 'top' : null}
               inverted={!isFixedMenuShow}
@@ -222,9 +220,15 @@ export default function ResponsiveContainer() {
             <Segment
               inverted
               textAlign='center'
-              style={{ minHeight: 350, padding: '1em 0em' }}
+              style={{ minHeight: 350, padding: '1em 0em', background: 'none' }}
               vertical
             >
+              <Image
+                src='/images/title-fireplace.webp'
+                alt='грузинская печь'
+                fill
+                style={{ objectFit: 'cover', zIndex: -1 }}
+              />
               <Container>
                 <Menu inverted pointing secondary size='large'>
                   <Menu.Item
