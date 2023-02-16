@@ -153,14 +153,22 @@ export default function ResponsiveContainer() {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em', background: 'none' }}
+            style={{
+              minHeight: 700,
+              padding: '1em 0em',
+              background:
+                'linear-gradient(to top, transparent, transparent 80%,  #030305 92%), linear-gradient(0.52turn, transparent, transparent 90%, #cce2ff 100%), linear-gradient(-0.51turn, transparent, transparent 93%, #cce2ff 100%)',
+            }}
             vertical
           >
             <Image
               src='/images/title-fireplace.webp'
               alt='грузинская печь'
               fill
-              style={{ objectFit: 'cover', zIndex: -1 }}
+              style={{
+                objectFit: 'cover',
+                zIndex: -1,
+              }}
             />
             <Menu
               fixed={isFixedMenuShow ? 'top' : null}
@@ -220,7 +228,12 @@ export default function ResponsiveContainer() {
             <Segment
               inverted
               textAlign='center'
-              style={{ minHeight: 350, padding: '1em 0em', background: 'none' }}
+              style={{
+                minHeight: 350,
+                padding: '1em 0em',
+                background:
+                  'linear-gradient(to top, transparent, transparent 80%,  #030305 92%), linear-gradient(0.52turn, transparent, transparent 90%, #cce2ff 100%), linear-gradient(-0.51turn, transparent, transparent 93%, #cce2ff 100%)',
+              }}
               vertical
             >
               <Image

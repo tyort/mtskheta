@@ -5,20 +5,14 @@ import { Button, Container, Header, Icon } from 'semantic-ui-react';
 function HomepageHeading() {
   return (
     <Container text>
-      <Image
-        style={{ marginTop: '10vh' }}
-        src='/images/mountains.png'
-        width={150}
-        height={80}
-        alt='горы'
-      />
       <Header
         as='h1'
         content='Мцхета'
         inverted
         style={{
           fontFamily: 'Arbor, Arial, sans-serif !important',
-          marginTop: '0 !important',
+          textShadow:
+            '0.1rem -0.2rem 0.5rem #e25822, -0.1rem -0.2rem 0.3rem #e25822, 0px 0.2rem 0.2rem black',
         }}
       />
       <Header
@@ -27,8 +21,18 @@ function HomepageHeading() {
         inverted
         style={{
           fontFamily: 'Arbor, Arial, sans-serif !important',
-          marginBottom: '2rem',
+          textShadow:
+            '3px -3px 4px black, -4px -2px 4px black, 4px 3px 2px black',
         }}
+      />
+      <Image
+        style={{
+          filter: 'drop-shadow(0px 0px 4px #e25822)',
+        }}
+        src='/images/mountains.png'
+        width={150}
+        height={80}
+        alt='горы'
       />
     </Container>
   );
