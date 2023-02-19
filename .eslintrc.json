@@ -4,6 +4,7 @@
       "es2021": true
   },
   "extends": [
+      "next",
       "next/core-web-vitals",
       "plugin:react/recommended",
       "airbnb",
@@ -37,6 +38,8 @@
       "jsx-a11y/anchor-is-valid": "off",
       "no-unused-expressions": ["error", {"allowShortCircuit": true}],
       "jsx-a11y/label-has-associated-control": "off",
-      "jsx-a11y/no-noninteractive-tabindex": "off"
+      "jsx-a11y/no-noninteractive-tabindex": "off",
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off"
   }
 }
