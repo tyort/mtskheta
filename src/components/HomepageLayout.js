@@ -157,11 +157,30 @@ function HomepageLayout() {
       </Segment>
 
       <Segment style={{ padding: '8em 0em' }} vertical>
+        <Image
+          src='/images/concert-hall.jpg'
+          alt='грузинская печь'
+          fill
+          style={{
+            objectFit: 'cover',
+            zIndex: -1,
+            filter: 'hue-rotate(180deg) contrast(150%) brightness(20%)',
+          }}
+        />
         <Container text>
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            Breaking The Grid, Grabs Your Attention
+          <Header
+            as='h3'
+            style={{
+              fontSize: '3em',
+              color: 'white',
+              fontFamily: 'Arbor, Arial, sans-serif !important',
+              textShadow:
+                '0.1rem -0.2rem 0.5rem #e25822, -0.2rem 0.2rem 0.2rem #e25822',
+            }}
+          >
+            Афиша
           </Header>
-          <p style={{ fontSize: '1.33em' }}>
+          <p style={{ fontSize: '1.5em', color: 'white' }}>
             Instead of focusing on content creation and hard work, we have
             learned how to master the art of doing nothing by providing massive
             amounts of whitespace and generic content that can seem massive,
