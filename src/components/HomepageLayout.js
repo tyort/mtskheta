@@ -1,20 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Container,
   Divider,
   Grid,
   Header,
-  Image,
+  Image as ImageUI,
   List,
   Segment,
+  Modal,
+  Icon,
 } from 'semantic-ui-react';
+import Image from 'next/image';
 import ResponsiveCarousel from './ResponsiveCarousel';
+import Specialties from './Specialties';
 
 function HomepageLayout() {
+  const [open, setOpen] = useState(false);
+
+  const handleBtnClick = () => {
+    setOpen(true);
+  };
+
   return (
     <>
+      <Modal
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
+      >
+        <Modal.Header>Select a Photo</Modal.Header>
+        <Modal.Content image>
+          <ImageUI
+            size='medium'
+            src='https://react.semantic-ui.com/images/avatar/large/rachel.png'
+            wrapped
+          />
+          <Modal.Description>
+            <Header>Default Profile Image</Header>
+            <p>
+              We've found the following gravatar image associated with your
+              e-mail address.
+            </p>
+            <p>Is it okay to use this photo?</p>
+          </Modal.Description>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button color='black' onClick={() => setOpen(false)}>
+            Nope
+          </Button>
+          <Button
+            content="Yep, that's me"
+            labelPosition='right'
+            icon='checkmark'
+            onClick={() => setOpen(false)}
+            positive
+          />
+        </Modal.Actions>
+      </Modal>
       <Segment style={{ padding: '5em 1em' }} vertical>
+        <Image
+          src='/images/mtskheta-landscape.webp'
+          alt='грузинская печь'
+          fill
+          style={{
+            objectFit: 'cover',
+            zIndex: -1,
+            opacity: '0.2',
+            filter: 'sepia(100%)',
+          }}
+        />
         <Grid container stackable verticalAlign='middle'>
           <Grid.Row>
             <Grid.Column computer={8}>
@@ -27,10 +82,17 @@ function HomepageLayout() {
               >
                 О Ресторане
               </Header>
-              <p style={{ fontSize: '1.33em' }}>
-                We can give your company superpowers to do things that they
-                never thought possible. Let us delight your customers and
-                empower your needs... through pure data analytics.
+              <p style={{ fontSize: '1.33em', textAlign: 'justify' }}>
+                Только у нас Вы сможете погрузиться в атмсоферу кулинарных
+                традиций одного из{' '}
+                <strong>Древних христианских городов Грузии</strong>. Трепетное
+                отношение к национальной кухне и архаичный способ приготовления
+                еды в <em>печи на дровах</em> - являются отличительными
+                особенностями нашего Ресторана, но не единственными :) <br />
+                Яства из мяса и овощей, приправленные разнообразными специями,
+                органично составляют более глубокий богатый насыщенный вкус.
+                Ждем Вас и ваших близких
+                <Icon name='hand peace' />
               </p>
             </Grid.Column>
             <Grid.Column floated='right' computer={8}>
@@ -39,7 +101,7 @@ function HomepageLayout() {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column textAlign='center'>
-              <Button size='huge'>Check Them Out</Button>
+              <Button size='huge'>Забронировать стол</Button>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -49,24 +111,49 @@ function HomepageLayout() {
         <Grid celled='internally' columns='equal' stackable>
           <Grid.Row textAlign='center'>
             <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <Header as='h3' style={{ fontSize: '2em' }}>
-                "What a Company"
+              <Header
+                as='h3'
+                style={{
+                  fontSize: '2em',
+                  fontFamily: 'Arbor, Arial, sans-serif !important',
+                }}
+              >
+                &quot;Хотелось бы вкусно и сытно поесть грузинской кухни&quot;
               </Header>
               <p style={{ fontSize: '1.33em' }}>
-                That is what they all say about us
+                Это то чем славится наш ресторан
               </p>
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <Header as='h3' style={{ fontSize: '2em' }}>
-                "I shouldn't have gone with their competitor."
+              <Header
+                as='h3'
+                style={{
+                  fontSize: '2em',
+                  fontFamily: 'Arbor, Arial, sans-serif !important',
+                }}
+              >
+                &quot;Провести романтический вечер в компании живой музыки&quot;
               </Header>
               <p style={{ fontSize: '1.33em' }}>
-                <Image avatar src='/images/avatar/large/nan.jpg' />
-                <b>Nan</b> Chief Fun Officer Acme Toys
+                Этот вечер может стать незабываемым для вас и ваших близких
               </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
+      </Segment>
+
+      <Segment vertical>
+        <Header
+          as='h3'
+          textAlign='center'
+          style={{
+            fontSize: '2em',
+            fontFamily: 'Arbor, Arial, sans-serif !important',
+          }}
+        >
+          Фирменные блюда
+        </Header>
+        <Specialties handleBtnClick={handleBtnClick} />
       </Segment>
 
       <Segment style={{ padding: '8em 0em' }} vertical>
@@ -82,28 +169,6 @@ function HomepageLayout() {
           </p>
           <Button as='a' size='large'>
             Read More
-          </Button>
-
-          <Divider
-            as='h4'
-            className='header'
-            horizontal
-            style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-          >
-            <a href='#'>Case Studies</a>
-          </Divider>
-
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            Did We Tell You About Our Bananas?
-          </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            Yes I know you probably disregarded the earlier boasts as
-            non-sequitur filler content, but it's really true. It took years of
-            gene splicing and combinatory DNA research, but our bananas can
-            really dance.
-          </p>
-          <Button as='a' size='large'>
-            I'm Still Quite Interested
           </Button>
         </Container>
       </Segment>
