@@ -7,7 +7,12 @@ function Specialties({ handleBtnClick }) {
     <Grid>
       <Grid.Column computer={4} tablet={8} mobile={16}>
         <Card centered>
-          <Image src='/images/specialities/pic1.jpg' wrapped ui={false} />
+          <Image
+            loading='lazy'
+            src='/images/specialities/pic1.jpg'
+            wrapped
+            ui={false}
+          />
           <Card.Content>
             <Card.Header>Хачапури по-аджарски</Card.Header>
             <Card.Meta>
@@ -32,7 +37,12 @@ function Specialties({ handleBtnClick }) {
       </Grid.Column>
       <Grid.Column computer={4} tablet={8} mobile={16}>
         <Card centered>
-          <Image src='/images/specialities/pic2.jpg' wrapped ui={false} />
+          <Image
+            loading='lazy'
+            src='/images/specialities/pic2.jpg'
+            wrapped
+            ui={false}
+          />
           <Card.Content>
             <Card.Header>Хинкали</Card.Header>
             <Card.Meta>
@@ -57,7 +67,12 @@ function Specialties({ handleBtnClick }) {
       </Grid.Column>
       <Grid.Column computer={4} tablet={8} mobile={16}>
         <Card centered>
-          <Image src='/images/specialities/pic3.jpg' wrapped ui={false} />
+          <Image
+            loading='lazy'
+            src='/images/specialities/pic3.jpg'
+            wrapped
+            ui={false}
+          />
           <Card.Content>
             <Card.Header>Шашлычное ассорти &quot;Мцхета&quot;</Card.Header>
             <Card.Meta>
@@ -82,7 +97,12 @@ function Specialties({ handleBtnClick }) {
       </Grid.Column>
       <Grid.Column computer={4} tablet={8} mobile={16}>
         <Card centered>
-          <Image src='/images/specialities/pic4.jpg' wrapped ui={false} />
+          <Image
+            loading='lazy'
+            src='/images/specialities/pic4.jpg'
+            wrapped
+            ui={false}
+          />
           <Card.Content>
             <Card.Header>Пхали</Card.Header>
             <Card.Meta>
