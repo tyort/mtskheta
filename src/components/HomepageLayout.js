@@ -164,7 +164,7 @@ function HomepageLayout() {
             filter: 'hue-rotate(180deg) contrast(150%) brightness(20%)',
           }}
         />
-        <Container text>
+        <Container text textAlign='right'>
           <Header
             as='h3'
             style={{
@@ -177,14 +177,21 @@ function HomepageLayout() {
           >
             Афиша
           </Header>
-          <p style={{ fontSize: '1.5em', color: 'white' }}>
-            Instead of focusing on content creation and hard work, we have
-            learned how to master the art of doing nothing by providing massive
-            amounts of whitespace and generic content that can seem massive,
-            monolithic and worth your attention.
+          <p
+            style={{ fontSize: '1.2em', color: 'white', textAlign: 'justify' }}
+          >
+            Поддержанию приятной непринужденной атмосферы способствует музыка,
+            <strong> исполненная вживую</strong>, самых разных направлений.
+            Веселая озорная или мелодичная душевная - мы вместе с Вами поберем
+            репертуар соответствующий вашему настроению или событию. Позвольте
+            <em> Cебе и Вашим близким</em> хоть немного расслабиться и забыть о
+            внешней суете города.
+            <br />
+            <br />
+            <small>Каждый вечер с 19:00 (Кроме Пн, Вт).</small>
           </p>
-          <Button as='a' size='large'>
-            Read More
+          <Button inverted color='purple' size='big'>
+            Забронировать стол
           </Button>
         </Container>
       </Segment>
