@@ -190,7 +190,7 @@ function HomepageLayout() {
             <br />
             <small>Каждый вечер с 19:00 (Кроме Пн, Вт).</small>
           </p>
-          <Button inverted color='purple' size='big'>
+          <Button inverted color='orange' size='big'>
             Забронировать стол
           </Button>
         </Container>

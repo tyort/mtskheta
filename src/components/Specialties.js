@@ -1,6 +1,7 @@
 import React from 'react';
 // import Image from 'next/image';
 import { Grid, Card, Rating, Image, Button } from 'semantic-ui-react';
+import styles from '../styles/Specialties.module.scss';
 
 function Specialties({ handleBtnClick }) {
   return (
@@ -18,7 +19,7 @@ function Specialties({ handleBtnClick }) {
             <Card.Meta>
               <span className='date'>Выпечка</span>
             </Card.Meta>
-            <Card.Description>
+            <Card.Description className={styles['items-text']}>
               Достаточно точное описание формы звучит, как{' '}
               <i>
                 открытая лодочка, внутри которой находится аппетитная начинка с
@@ -57,7 +58,7 @@ function Specialties({ handleBtnClick }) {
             <Card.Meta>
               <span className='date'>Горячие блюда</span>
             </Card.Meta>
-            <Card.Description>
+            <Card.Description className={styles['items-text']}>
               Конечно же первое что приходит в голову при упоминании грузинской
               кухни - <strong>хинкали</strong>. Сочный, сытный и ароматный
               мясной бульон, закрытый в мешочке из теста — это блюдо одно из
@@ -93,7 +94,7 @@ function Specialties({ handleBtnClick }) {
             <Card.Meta>
               <span className='date'>Блюда на углях</span>
             </Card.Meta>
-            <Card.Description>
+            <Card.Description className={styles['items-text']}>
               Натуральное мясо входит в рацион каждого здорового человека. А
               какое кавказское застолье обходится без мясных кулинарных изысков?
               Да и сложно отказать себе в удобвольствии отведать хотя бы кусочек
@@ -131,7 +132,7 @@ function Specialties({ handleBtnClick }) {
             <Card.Meta>
               <span className='date'>Холодная закуска</span>
             </Card.Meta>
-            <Card.Description>
+            <Card.Description className={styles['items-text']}>
               Грузинская кухня богата не только мясными изделиями, сырами и
               выпечкой. Данная закуска является неотъемлемым атрибутом
               национального стола. Подается как отдельное кушанье, так и закуска
