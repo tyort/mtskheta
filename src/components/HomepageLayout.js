@@ -148,7 +148,7 @@ function HomepageLayout() {
             fontFamily: 'Arbor, Arial, sans-serif !important',
           }}
         >
-          Фирменные блюда
+          Популярные блюда
         </Header>
         <Specialties handleBtnClick={handleBtnClick} />
       </Segment>
