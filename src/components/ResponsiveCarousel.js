@@ -46,16 +46,17 @@ function ResponsiveCarousel() {
             setOpen(true);
           }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <div key={item} className={styles.swipItem}>
+          {new Array(16).fill('').map((item, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <div key={index} className={styles.swipItem}>
               <picture>
                 <source
-                  srcSet={`/images/restaurant-slider/slide${item}.webp`}
+                  srcSet={`/images/restaurant-slider/slide${index + 1}.webp`}
                   type='image/webp'
                 />
                 <img
                   loading='lazy'
-                  src={`/images/restaurant-slider/slide${item}.jpg`}
+                  src={`/images/restaurant-slider/slide${index + 1}.jpg`}
                   alt='что-то там'
                 />
               </picture>
