@@ -13,12 +13,15 @@ import {
 } from 'semantic-ui-react';
 import Image from 'next/image';
 import ResponsiveCarousel from './ResponsiveCarousel';
-import Specialties from './Specialties';
+import Specialties from './Specialities';
+import SpecialityDescription from './SpecialityDescription';
 
 function HomepageLayout() {
   const [open, setOpen] = useState(false);
+  const [speciality, setSpecialtity] = useState(false);
 
-  const handleBtnClick = () => {
+  const handleBtnClick = ({ id }) => {
+    setSpecialtity(id);
     setOpen(true);
   };
 
@@ -29,28 +32,21 @@ function HomepageLayout() {
         onOpen={() => setOpen(true)}
         open={open}
       >
-        <Modal.Header>Select a Photo</Modal.Header>
         <Modal.Content image>
           <ImageUI
-            size='medium'
-            src='https://react.semantic-ui.com/images/avatar/large/rachel.png'
-            wrapped
+            size='big'
+            src={`/images/specialities/pic${speciality}-big.jpg`}
           />
           <Modal.Description>
-            <Header>Default Profile Image</Header>
+            <Header>Описание</Header>
             <p>
-              We've found the following gravatar image associated with your
-              e-mail address.
+              <SpecialityDescription id={speciality} />
             </p>
-            <p>Is it okay to use this photo?</p>
           </Modal.Description>
         </Modal.Content>
         <Modal.Actions>
-          <Button color='black' onClick={() => setOpen(false)}>
-            Nope
-          </Button>
           <Button
-            content="Yep, that's me"
+            content='OK'
             labelPosition='right'
             icon='checkmark'
             onClick={() => setOpen(false)}
