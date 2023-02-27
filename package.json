@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@artsy/fresnel": "^6.1.0",
     "@next/font": "13.1.6",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
@@ -18,7 +17,8 @@
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",
     "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^2.1.4"
+    "semantic-ui-react": "^2.1.4",
+    "ua-parser-js": "^1.0.33"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
