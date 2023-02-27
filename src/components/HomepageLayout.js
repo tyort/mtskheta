@@ -55,10 +55,10 @@ function HomepageLayout() {
           />
         </Modal.Actions>
       </Modal>
-      <Segment style={{ padding: '5em 1em' }} vertical>
+      <Segment id='page-about' style={{ padding: '5em 1em' }} vertical>
         <Image
           src='/images/mtskheta-landscape.webp'
-          alt='грузинская печь'
+          alt='Мцхета пейзаж'
           fill
           style={{
             objectFit: 'cover',
@@ -151,7 +151,7 @@ function HomepageLayout() {
         </Grid>
       </Segment>
 
-      <Segment vertical>
+      <Segment id='page-specialities' vertical>
         <Header
           as='h3'
           textAlign='center'
@@ -165,10 +165,10 @@ function HomepageLayout() {
         <Specialties handleBtnClick={handleBtnClick} />
       </Segment>
 
-      <Segment style={{ padding: '8em 0em' }} vertical>
+      <Segment id='page-affiche' style={{ padding: '8em 0em' }} vertical>
         <Image
           src='/images/concert-hall.jpg'
-          alt='грузинская печь'
+          alt='Концертный зал'
           fill
           style={{
             objectFit: 'cover',
@@ -214,7 +214,12 @@ function HomepageLayout() {
         </Container>
       </Segment>
 
-      <Segment inverted vertical style={{ padding: '5em 1em' }}>
+      <Segment
+        id='page-contacts'
+        inverted
+        vertical
+        style={{ padding: '5em 1em' }}
+      >
         <Container>
           <Grid divided inverted stackable>
             <Grid.Row>
