@@ -1,7 +1,6 @@
 // import Head from 'next/head';
 // import Image from 'next/image';
 // import { Inter } from '@next/font/google';
-// import styles from '@/styles/Home.module.css';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -141,10 +140,17 @@ import HomepageLayout from '../components/HomepageLayout';
 export default function ResponsiveContainer() {
   const [isFixedMenuShow, setShowFixedMenu] = useState(false);
   const [isSidebarOpened, setSidebarOpened] = useState(false);
-  const [activeMenuitem, setActiveMenuItem] = useState('about');
+  const [activeMenuitem, setActiveMenuItem] = useState('page-main_top');
+
+  const handleClickMenuItem = (_evt, data) => {
+    const element = document.getElementById(data.name);
+    isSidebarOpened && setSidebarOpened(false);
+    setActiveMenuItem(data.name);
+    element.scrollIntoView();
+  };
 
   return (
-    <Grid columns={1}>
+    <Grid columns={1} id='page-main_top'>
       <Grid.Column only='computer'>
         <Visibility
           once={false}
@@ -181,42 +187,37 @@ export default function ResponsiveContainer() {
             >
               <Container>
                 <Menu.Item
-                  as='a'
-                  name='home'
-                  active={activeMenuitem === 'home'}
-                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                  name='page-main_top'
+                  active={activeMenuitem === 'page-main_top'}
+                  onClick={handleClickMenuItem}
                 >
                   <Icon name='home' />
                 </Menu.Item>
                 <Menu.Item
-                  as='a'
-                  name='about'
-                  active={activeMenuitem === 'about'}
-                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                  name='page-about'
+                  active={activeMenuitem === 'page-about'}
+                  onClick={handleClickMenuItem}
                 >
                   О Ресторане
                 </Menu.Item>
                 <Menu.Item
-                  as='a'
-                  name='dishes'
-                  active={activeMenuitem === 'dishes'}
-                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                  name='page-specialities'
+                  active={activeMenuitem === 'page-specialities'}
+                  onClick={handleClickMenuItem}
                 >
                   Популярные блюда
                 </Menu.Item>
                 <Menu.Item
-                  as='a'
-                  active={activeMenuitem === 'affiche'}
-                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
-                  name='affiche'
+                  active={activeMenuitem === 'page-affiche'}
+                  onClick={handleClickMenuItem}
+                  name='page-affiche'
                 >
                   Афиша
                 </Menu.Item>
                 <Menu.Item
-                  as='a'
-                  name='contacts'
-                  active={activeMenuitem === 'contacts'}
-                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                  name='page-contacts'
+                  active={activeMenuitem === 'page-contacts'}
+                  onClick={handleClickMenuItem}
                 >
                   Контакты
                 </Menu.Item>
@@ -251,42 +252,30 @@ export default function ResponsiveContainer() {
             visible={isSidebarOpened}
           >
             <Menu.Item
-              as='a'
-              name='home'
-              active={activeMenuitem === 'home'}
-              onClick={(_evt, data) => setActiveMenuItem(data.name)}
-            >
-              В начало
-            </Menu.Item>
-            <Menu.Item
-              as='a'
-              name='about'
-              active={activeMenuitem === 'about'}
-              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+              name='page-about'
+              active={activeMenuitem === 'page-about'}
+              onClick={handleClickMenuItem}
             >
               О ресторане
             </Menu.Item>
             <Menu.Item
-              as='a'
-              name='dishes'
-              active={activeMenuitem === 'dishes'}
-              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+              name='page-specialities'
+              active={activeMenuitem === 'page-specialities'}
+              onClick={handleClickMenuItem}
             >
               Популярные блюда
             </Menu.Item>
             <Menu.Item
-              as='a'
-              name='affiche'
-              active={activeMenuitem === 'affiche'}
-              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+              name='page-affiche'
+              active={activeMenuitem === 'page-affiche'}
+              onClick={handleClickMenuItem}
             >
               Афиша
             </Menu.Item>
             <Menu.Item
-              as='a'
-              name='contacts'
-              active={activeMenuitem === 'contacts'}
-              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+              name='page-contacts'
+              active={activeMenuitem === 'page-contacts'}
+              onClick={handleClickMenuItem}
             >
               Контакты
             </Menu.Item>
