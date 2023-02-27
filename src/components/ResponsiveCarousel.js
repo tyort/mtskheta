@@ -32,6 +32,7 @@ function ResponsiveCarousel() {
       </Modal>
       <div className={styles.container}>
         <Carousel
+          showThumbs={false}
           showArrows
           showIndicators
           infiniteLoop
@@ -40,7 +41,6 @@ function ResponsiveCarousel() {
           autoPlay
           transitionTime={1500}
           interval={5000}
-          showThumbs
           onClickItem={(data) => {
             setCurrentSlide(data);
             setOpen(true);

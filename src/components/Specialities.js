@@ -27,7 +27,7 @@ function Specialties({ handleBtnClick }) {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Rating icon='star' defaultRating={4} maxRating={5} />
+            <Rating icon='star' defaultRating={5} maxRating={5} />
             <Button
               inverted
               color='orange'
@@ -57,7 +57,7 @@ function Specialties({ handleBtnClick }) {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Rating icon='star' defaultRating={4} maxRating={5} />
+            <Rating icon='star' defaultRating={5} maxRating={5} />
             <Button
               inverted
               color='orange'
@@ -89,7 +89,7 @@ function Specialties({ handleBtnClick }) {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Rating icon='star' defaultRating={4} maxRating={5} />
+            <Rating icon='star' defaultRating={5} maxRating={5} />
             <Button
               inverted
               color='orange'

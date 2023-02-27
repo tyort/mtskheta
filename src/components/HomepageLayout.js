@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Image as ImageUI,
@@ -10,8 +9,10 @@ import {
   Segment,
   Modal,
   Icon,
+  Popup,
 } from 'semantic-ui-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ResponsiveCarousel from './ResponsiveCarousel';
 import Specialties from './Specialities';
 import SpecialityDescription from './SpecialityDescription';
@@ -84,8 +85,13 @@ function HomepageLayout() {
                 <strong>Древних христианских городов Грузии</strong>. Трепетное
                 отношение к национальной кухне и архаичный способ приготовления
                 еды в <em>печи на дровах</em> - являются отличительными
-                особенностями нашего Ресторана, но не единственными
+                особенностями нашего Ресторана, но не единственными.
                 <Icon name='hand peace' />
+                <br />
+                <br />
+                <small>
+                  <em>Время работы: c 12 до 00 (каждый день)</em>
+                </small>
               </p>
             </Grid.Column>
             <Grid.Column floated='right' computer={8}>
@@ -94,7 +100,15 @@ function HomepageLayout() {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column textAlign='center'>
-              <Button size='huge'>Забронировать стол</Button>
+              <Button
+                as='a'
+                basic
+                color='black'
+                size='huge'
+                href='https://t.me/mtskhetarest'
+              >
+                Забронировать стол
+              </Button>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -113,8 +127,9 @@ function HomepageLayout() {
               >
                 &quot;Хотелось бы вкусно и сытно поесть грузинской кухни&quot;
               </Header>
+              <Icon size='big' bordered circular name='thumbs up outline' />
               <p style={{ fontSize: '1.33em' }}>
-                Это то чем славится наш ресторан
+                Этим и славится наш ресторан :)
               </p>
             </Grid.Column>
             <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
@@ -127,6 +142,7 @@ function HomepageLayout() {
               >
                 &quot;Провести романтический вечер в компании живой музыки&quot;
               </Header>
+              <Icon size='big' bordered circular name='heart outline' />
               <p style={{ fontSize: '1.33em' }}>
                 Этот вечер может стать незабываемым для вас и ваших близких
               </p>
@@ -186,41 +202,109 @@ function HomepageLayout() {
             <br />
             <small>Каждый вечер с 19:00 (Кроме Пн, Вт).</small>
           </p>
-          <Button inverted color='orange' size='big'>
-            Забронировать стол
+          <Button
+            as='a'
+            inverted
+            color='orange'
+            size='big'
+            href='https://t.me/mtskhetarest'
+          >
+            Узнать о мероприятиях
           </Button>
         </Container>
       </Segment>
 
-      <Segment inverted vertical style={{ padding: '5em 0em' }}>
+      <Segment inverted vertical style={{ padding: '5em 1em' }}>
         <Container>
           <Grid divided inverted stackable>
             <Grid.Row>
               <Grid.Column width={3}>
-                <Header inverted as='h4' content='About' />
+                <Header inverted as='h4' content='Адрес' />
+                <address>
+                  Россия, 117303, г. Москва, ул. Керченская 1Б
+                  <br />
+                  <br />
+                  <small>Время работы: с 12 до 00 (каждый день)</small>
+                </address>
+              </Grid.Column>
+              <Grid.Column width={3}>
+                <Header inverted as='h4' content='Информация' />
                 <List link inverted>
-                  <List.Item as='a'>Sitemap</List.Item>
-                  <List.Item as='a'>Contact Us</List.Item>
-                  <List.Item as='a'>Religious Ceremonies</List.Item>
-                  <List.Item as='a'>Gazebo Plans</List.Item>
+                  <List.Item as='a'>О нас</List.Item>
+                  <List.Item>
+                    Свяжитесь с нами:
+                    <br />
+                    <Link href='https://t.me/mtskhetarest'>
+                      <Icon name='telegram plane' circular />
+                    </Link>
+                    <Link href='tel:+79043157277'>
+                      <Icon name='phone' circular />
+                    </Link>
+                    <Link href='mailto:mcheta777@mail.ru'>
+                      <Icon name='mail' circular />
+                    </Link>
+                  </List.Item>
+                  <List.Item as='a'>
+                    <Popup
+                      content={
+                        <p>
+                          На стадии разработки
+                          <Icon name='smile outline' size='large' />
+                        </p>
+                      }
+                      trigger={<p>Для партнеров</p>}
+                    />
+                  </List.Item>
+                  <List.Item as='a'>
+                    <Popup
+                      content={
+                        <p>
+                          На стадии разработки
+                          <Icon name='smile outline' size='large' />
+                        </p>
+                      }
+                      trigger={<p>Карьера</p>}
+                    />
+                  </List.Item>
                 </List>
               </Grid.Column>
               <Grid.Column width={3}>
-                <Header inverted as='h4' content='Services' />
+                <Header inverted as='h4' content='Блог' />
                 <List link inverted>
-                  <List.Item as='a'>Banana Pre-Order</List.Item>
-                  <List.Item as='a'>DNA FAQ</List.Item>
-                  <List.Item as='a'>How To Access</List.Item>
-                  <List.Item as='a'>Favorite X-Men</List.Item>
+                  <List.Item as='a'>
+                    <Icon name='instagram' size='large' />
+                  </List.Item>
+                  <List.Item as='a'>
+                    <Popup
+                      content={
+                        <p>
+                          На стадии разработки
+                          <Icon name='smile outline' size='large' />
+                        </p>
+                      }
+                      trigger={<p>Отзывы</p>}
+                    />
+                  </List.Item>
+                  <List.Item as='a'>
+                    <Popup
+                      content={
+                        <p>
+                          На стадии разработки
+                          <Icon name='smile outline' size='large' />
+                        </p>
+                      }
+                      trigger={<p>Мероприятия</p>}
+                    />
+                  </List.Item>
                 </List>
               </Grid.Column>
               <Grid.Column width={7}>
                 <Header as='h4' inverted>
-                  Footer Header
+                  Остальное
                 </Header>
                 <p>
-                  Extra space for a call to action inside the footer that could
-                  help re-engage users.
+                  Некоторые сервисы сайта находятся на стадии разработки. По
+                  всем вопросам обращайтесь по любому из указанным контактов.
                 </p>
               </Grid.Column>
             </Grid.Row>

@@ -141,6 +141,7 @@ import HomepageLayout from '../components/HomepageLayout';
 export default function ResponsiveContainer() {
   const [isFixedMenuShow, setShowFixedMenu] = useState(false);
   const [isSidebarOpened, setSidebarOpened] = useState(false);
+  const [activeMenuitem, setActiveMenuItem] = useState('about');
 
   return (
     <Grid columns={1}>
@@ -176,25 +177,60 @@ export default function ResponsiveContainer() {
               pointing={!isFixedMenuShow}
               secondary={!isFixedMenuShow}
               size='large'
+              style={{ border: 'none' }}
             >
               <Container>
-                <Menu.Item as='a' active>
-                  Home
+                <Menu.Item
+                  as='a'
+                  name='home'
+                  active={activeMenuitem === 'home'}
+                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                >
+                  <Icon name='home' />
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item
+                  as='a'
+                  name='about'
+                  active={activeMenuitem === 'about'}
+                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                >
+                  О Ресторане
+                </Menu.Item>
+                <Menu.Item
+                  as='a'
+                  name='dishes'
+                  active={activeMenuitem === 'dishes'}
+                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                >
+                  Популярные блюда
+                </Menu.Item>
+                <Menu.Item
+                  as='a'
+                  active={activeMenuitem === 'affiche'}
+                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                  name='affiche'
+                >
+                  Афиша
+                </Menu.Item>
+                <Menu.Item
+                  as='a'
+                  name='contacts'
+                  active={activeMenuitem === 'contacts'}
+                  onClick={(_evt, data) => setActiveMenuItem(data.name)}
+                >
+                  Контакты
+                </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!isFixedMenuShow}>
-                    Log in
-                  </Button>
+                  <Icon name='phone' />
+                  +7 (904) 315-72-77
                   <Button
                     as='a'
                     inverted={!isFixedMenuShow}
                     primary={isFixedMenuShow}
                     style={{ marginLeft: '0.5em' }}
+                    href='tel:+79043157277'
                   >
-                    Sign Up
+                    Позвоните нам
                   </Button>
                 </Menu.Item>
               </Container>
@@ -214,14 +250,46 @@ export default function ResponsiveContainer() {
             vertical
             visible={isSidebarOpened}
           >
-            <Menu.Item as='a' active>
-              Home
+            <Menu.Item
+              as='a'
+              name='home'
+              active={activeMenuitem === 'home'}
+              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+            >
+              В начало
             </Menu.Item>
-            <Menu.Item as='a'>Work</Menu.Item>
-            <Menu.Item as='a'>Company</Menu.Item>
-            <Menu.Item as='a'>Careers</Menu.Item>
-            <Menu.Item as='a'>Log in</Menu.Item>
-            <Menu.Item as='a'>Sign Up</Menu.Item>
+            <Menu.Item
+              as='a'
+              name='about'
+              active={activeMenuitem === 'about'}
+              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+            >
+              О ресторане
+            </Menu.Item>
+            <Menu.Item
+              as='a'
+              name='dishes'
+              active={activeMenuitem === 'dishes'}
+              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+            >
+              Популярные блюда
+            </Menu.Item>
+            <Menu.Item
+              as='a'
+              name='affiche'
+              active={activeMenuitem === 'affiche'}
+              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+            >
+              Афиша
+            </Menu.Item>
+            <Menu.Item
+              as='a'
+              name='contacts'
+              active={activeMenuitem === 'contacts'}
+              onClick={(_evt, data) => setActiveMenuItem(data.name)}
+            >
+              Контакты
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={isSidebarOpened}>
@@ -250,11 +318,8 @@ export default function ResponsiveContainer() {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted>
-                      Log in
-                    </Button>
                     <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                      Sign Up
+                      Позвонить
                     </Button>
                   </Menu.Item>
                 </Menu>
