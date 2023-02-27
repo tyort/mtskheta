@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import {
   Button,
   Container,
@@ -17,7 +17,7 @@ import ResponsiveCarousel from './ResponsiveCarousel';
 import Specialties from './Specialities';
 import SpecialityDescription from './SpecialityDescription';
 
-function HomepageLayout() {
+function HomepageLayout({ isComputer }) {
   const [open, setOpen] = useState(false);
   const [speciality, setSpecialtity] = useState(false);
 
@@ -55,7 +55,11 @@ function HomepageLayout() {
           />
         </Modal.Actions>
       </Modal>
-      <Segment id='page-about' style={{ padding: '5em 1em' }} vertical>
+      <Segment
+        id={`page-about${isComputer ? '-clone' : ''}`}
+        style={{ padding: '5em 1em' }}
+        vertical
+      >
         <Image
           src='/images/mtskheta-landscape.webp'
           alt='Мцхета пейзаж'
@@ -151,7 +155,7 @@ function HomepageLayout() {
         </Grid>
       </Segment>
 
-      <Segment id='page-specialities' vertical>
+      <Segment id={`page-specialities${isComputer ? '-clone' : ''}`} vertical>
         <Header
           as='h3'
           textAlign='center'
@@ -165,7 +169,11 @@ function HomepageLayout() {
         <Specialties handleBtnClick={handleBtnClick} />
       </Segment>
 
-      <Segment id='page-affiche' style={{ padding: '8em 0em' }} vertical>
+      <Segment
+        id={`page-affiche${isComputer ? '-clone' : ''}`}
+        style={{ padding: '8em 0em' }}
+        vertical
+      >
         <Image
           src='/images/concert-hall.jpg'
           alt='Концертный зал'
@@ -215,7 +223,7 @@ function HomepageLayout() {
       </Segment>
 
       <Segment
-        id='page-contacts'
+        id={`page-contacts${isComputer ? '-clone' : ''}`}
         inverted
         vertical
         style={{ padding: '5em 1em' }}

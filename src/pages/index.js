@@ -151,96 +151,6 @@ export default function ResponsiveContainer() {
 
   return (
     <Grid columns={1} id='page-main_top'>
-      <Grid.Column only='computer'>
-        <Visibility
-          once={false}
-          onBottomPassed={() => setShowFixedMenu(true)}
-          onBottomPassedReverse={() => setShowFixedMenu(false)}
-        >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{
-              minHeight: 700,
-              padding: '1em 0em',
-              background:
-                'linear-gradient(to top, transparent, transparent 80%,  #030305 92%), linear-gradient(0.52turn, transparent, transparent 90%, #cce2ff 100%), linear-gradient(-0.51turn, transparent, transparent 93%, #cce2ff 100%)',
-            }}
-            vertical
-          >
-            <Image
-              src='/images/title-fireplace.webp'
-              alt='грузинская печь'
-              fill
-              style={{
-                objectFit: 'cover',
-                zIndex: -1,
-              }}
-            />
-            <Menu
-              fixed={isFixedMenuShow ? 'top' : null}
-              inverted={!isFixedMenuShow}
-              pointing={!isFixedMenuShow}
-              secondary={!isFixedMenuShow}
-              size='large'
-              style={{ border: 'none' }}
-            >
-              <Container>
-                <Menu.Item
-                  name='page-main_top'
-                  active={activeMenuitem === 'page-main_top'}
-                  onClick={handleClickMenuItem}
-                >
-                  <Icon name='home' />
-                </Menu.Item>
-                <Menu.Item
-                  name='page-about'
-                  active={activeMenuitem === 'page-about'}
-                  onClick={handleClickMenuItem}
-                >
-                  О Ресторане
-                </Menu.Item>
-                <Menu.Item
-                  name='page-specialities'
-                  active={activeMenuitem === 'page-specialities'}
-                  onClick={handleClickMenuItem}
-                >
-                  Популярные блюда
-                </Menu.Item>
-                <Menu.Item
-                  active={activeMenuitem === 'page-affiche'}
-                  onClick={handleClickMenuItem}
-                  name='page-affiche'
-                >
-                  Афиша
-                </Menu.Item>
-                <Menu.Item
-                  name='page-contacts'
-                  active={activeMenuitem === 'page-contacts'}
-                  onClick={handleClickMenuItem}
-                >
-                  Контакты
-                </Menu.Item>
-                <Menu.Item position='right'>
-                  <Icon name='phone' />
-                  +7 (904) 315-72-77
-                  <Button
-                    as='a'
-                    inverted={!isFixedMenuShow}
-                    primary={isFixedMenuShow}
-                    style={{ marginLeft: '0.5em' }}
-                    href='tel:+79043157277'
-                  >
-                    Позвоните нам
-                  </Button>
-                </Menu.Item>
-              </Container>
-            </Menu>
-            <HomepageHeading />
-          </Segment>
-        </Visibility>
-        <HomepageLayout />
-      </Grid.Column>
       <Grid.Column only='tablet mobile'>
         <Sidebar.Pushable>
           <Sidebar
@@ -307,7 +217,14 @@ export default function ResponsiveContainer() {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                    <Icon name='phone' />
+                    +7 (904) 315-72-77
+                    <Button
+                      as='a'
+                      inverted
+                      style={{ marginLeft: '0.5em' }}
+                      href='tel:+79043157277'
+                    >
                       Позвонить
                     </Button>
                   </Menu.Item>
@@ -316,9 +233,99 @@ export default function ResponsiveContainer() {
               <HomepageHeading />
             </Segment>
 
-            <HomepageLayout />
+            <HomepageLayout isComputer={false} />
           </Sidebar.Pusher>
         </Sidebar.Pushable>
+      </Grid.Column>
+      <Grid.Column only='computer'>
+        <Visibility
+          once={false}
+          onBottomPassed={() => setShowFixedMenu(true)}
+          onBottomPassedReverse={() => setShowFixedMenu(false)}
+        >
+          <Segment
+            inverted
+            textAlign='center'
+            style={{
+              minHeight: 700,
+              padding: '1em 0em',
+              background:
+                'linear-gradient(to top, transparent, transparent 80%,  #030305 92%), linear-gradient(0.52turn, transparent, transparent 90%, #cce2ff 100%), linear-gradient(-0.51turn, transparent, transparent 93%, #cce2ff 100%)',
+            }}
+            vertical
+          >
+            <Image
+              src='/images/title-fireplace.webp'
+              alt='грузинская печь'
+              fill
+              style={{
+                objectFit: 'cover',
+                zIndex: -1,
+              }}
+            />
+            <Menu
+              fixed={isFixedMenuShow ? 'top' : null}
+              inverted={!isFixedMenuShow}
+              pointing={!isFixedMenuShow}
+              secondary={!isFixedMenuShow}
+              size='large'
+              style={{ border: 'none' }}
+            >
+              <Container>
+                <Menu.Item
+                  name='page-main_top'
+                  active={activeMenuitem === 'page-main_top'}
+                  onClick={handleClickMenuItem}
+                >
+                  <Icon name='home' />
+                </Menu.Item>
+                <Menu.Item
+                  name='page-about-clone'
+                  active={activeMenuitem === 'page-about-clone'}
+                  onClick={handleClickMenuItem}
+                >
+                  О Ресторане
+                </Menu.Item>
+                <Menu.Item
+                  name='page-specialities-clone'
+                  active={activeMenuitem === 'page-specialities-clone'}
+                  onClick={handleClickMenuItem}
+                >
+                  Популярные блюда
+                </Menu.Item>
+                <Menu.Item
+                  active={activeMenuitem === 'page-affiche-clone'}
+                  onClick={handleClickMenuItem}
+                  name='page-affiche-clone'
+                >
+                  Афиша
+                </Menu.Item>
+                <Menu.Item
+                  name='page-contacts-clone'
+                  active={activeMenuitem === 'page-contacts-clone'}
+                  onClick={handleClickMenuItem}
+                >
+                  Контакты
+                </Menu.Item>
+                <Menu.Item position='right'>
+                  <Icon name='phone' />
+                  +7 (904) 315-72-77
+                  <Button
+                    as='a'
+                    inverted={!isFixedMenuShow}
+                    primary={isFixedMenuShow}
+                    style={{ marginLeft: '0.5em' }}
+                    href='tel:+79043157277'
+                  >
+                    Позвоните нам
+                  </Button>
+                </Menu.Item>
+              </Container>
+            </Menu>
+            <HomepageHeading />
+          </Segment>
+        </Visibility>
+        <HomepageLayout isComputer />
       </Grid.Column>
     </Grid>
   );
