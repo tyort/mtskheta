@@ -123,6 +123,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Button,
   Container,
@@ -188,6 +189,9 @@ export default function ResponsiveContainer() {
               onClick={handleClickMenuItem}
             >
               Контакты
+            </Menu.Item>
+            <Menu.Item>
+              <Link href='/our-menu'>Наше меню</Link>
             </Menu.Item>
           </Sidebar>
 
@@ -306,6 +310,11 @@ export default function ResponsiveContainer() {
                   onClick={handleClickMenuItem}
                 >
                   Контакты
+                </Menu.Item>
+                <Menu.Item>
+                  <Link style={{ marginBottom: '-2px' }} href='/our-menu'>
+                    Наше меню
+                  </Link>
                 </Menu.Item>
                 <Menu.Item position='right'>
                   <Icon name='phone' />
