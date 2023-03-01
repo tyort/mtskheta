@@ -1,11 +1,18 @@
 import Image from 'next/image';
-import { Comment, Header, Icon, Segment } from 'semantic-ui-react';
+import {
+  Comment,
+  Header,
+  Icon,
+  Segment,
+  Menu,
+  Button,
+} from 'semantic-ui-react';
 import styles from '../../styles/Home.module.scss';
 
 function OurMenu({ data }) {
   return (
     <>
-      {data.map((sheet) => {
+      {data.map((sheet, index) => {
         const { type, schedule } = sheet;
         return (
           <Segment
@@ -16,16 +23,24 @@ function OurMenu({ data }) {
           >
             <Image
               src='/images/222.jpg'
-              alt='грузинская печь'
+              alt='Папирус'
               fill
               style={{
                 objectFit: 'fill',
                 zIndex: -1,
               }}
             />
+            {index === 0 && (
+              <Header
+                textAlign='center'
+                as='h2'
+                className='header-style__mon-amour-one'
+                content='Наш ассортимент блюд'
+              />
+            )}
             <Header
               textAlign='center'
-              as='h2'
+              as='h3'
               className='header-style__mon-amour-one'
             >
               {type}
@@ -77,6 +92,11 @@ function OurMenu({ data }) {
           </Segment>
         );
       })}
+      <Menu fixed='bottom' secondary style={{ justifyContent: 'center' }}>
+        <Menu.Item>
+          <Button as='a' icon='home' inverted color='brown' href='/' />
+        </Menu.Item>
+      </Menu>
     </>
   );
 }
