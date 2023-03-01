@@ -221,12 +221,12 @@ export default function ResponsiveContainer() {
                   </Menu.Item>
                   <Menu.Item position='right'>
                     <Icon name='phone' />
-                    +7 (969) 270-00-06
+                    +7 (499) 122-22-20
                     <Button
                       as='a'
                       inverted
                       style={{ marginLeft: '0.5em' }}
-                      href='tel:+79692700006'
+                      href='tel:+74991222220'
                     >
                       Позвонить
                     </Button>
@@ -317,13 +317,13 @@ export default function ResponsiveContainer() {
                 </Menu.Item>
                 <Menu.Item position='right'>
                   <Icon name='phone' />
-                  +7 (969) 270-00-06
+                  +7 (499) 122-22-20
                   <Button
                     as='a'
                     inverted={!isFixedMenuShow}
                     primary={isFixedMenuShow}
                     style={{ marginLeft: '0.5em' }}
-                    href='tel:+79692700006'
+                    href='tel:+74991222220'
                   >
                     Позвоните нам
                   </Button>
