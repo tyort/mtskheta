@@ -106,6 +106,14 @@ a {
   }
 }
 
+h1, h2, h3, h4 {
+  font-family: Arbor, Arial, sans-serif !important;
+
+  &.header-style__mon-amour-one {
+    font-family: Mon_Amour_One, Arial, sans-serif !important;
+  }
+}
+
 h1 {
   font-size: 4em !important;
   font-weight: normal !important;

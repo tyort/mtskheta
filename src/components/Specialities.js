@@ -16,7 +16,7 @@ function Specialties({ handleBtnClick }) {
             ui={false}
           />
           <Card.Content>
-            <Card.Header style={{ height: '4rem' }}>
+            <Card.Header as='h4' style={{ height: '4rem' }}>
               Хачапури по-аджарски
             </Card.Header>
             <Card.Meta>
@@ -48,7 +48,7 @@ function Specialties({ handleBtnClick }) {
             ui={false}
           />
           <Card.Content>
-            <Card.Header style={{ height: '4rem' }}>Хинкали</Card.Header>
+            <Card.Header as='h4' style={{ height: '4rem' }}>Хинкали</Card.Header>
             <Card.Meta>
               <span className='date'>Горячие блюда</span>
             </Card.Meta>
@@ -78,7 +78,7 @@ function Specialties({ handleBtnClick }) {
             ui={false}
           />
           <Card.Content>
-            <Card.Header style={{ height: '4rem' }}>
+            <Card.Header as='h4' style={{ height: '4rem' }}>
               Шашлычное ассорти &quot;Мцхета&quot;
             </Card.Header>
             <Card.Meta>
@@ -110,7 +110,7 @@ function Specialties({ handleBtnClick }) {
             ui={false}
           />
           <Card.Content>
-            <Card.Header style={{ height: '4rem' }}>Пхали</Card.Header>
+            <Card.Header as='h4' style={{ height: '4rem' }}>Пхали</Card.Header>
             <Card.Meta>
               <span className='date'>Холодная закуска</span>
             </Card.Meta>

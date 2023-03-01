@@ -73,7 +73,6 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 О Ресторане
@@ -121,7 +120,6 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 &quot;Хотелось бы вкусно и сытно поесть грузинской кухни&quot;
@@ -136,7 +134,6 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 &quot;Провести романтический вечер в компании живой музыки&quot;
@@ -156,7 +153,6 @@ function HomepageLayout({ isComputer }) {
           textAlign='center'
           style={{
             fontSize: '2em',
-            fontFamily: 'Arbor, Arial, sans-serif',
           }}
         >
           Популярные блюда
@@ -185,7 +181,6 @@ function HomepageLayout({ isComputer }) {
             style={{
               fontSize: '3em',
               color: 'white',
-              fontFamily: 'Arbor, Arial, sans-serif',
               textShadow:
                 '0.1rem -0.2rem 0.5rem #e25822, -0.2rem 0.2rem 0.2rem #e25822',
             }}
@@ -227,7 +222,7 @@ function HomepageLayout({ isComputer }) {
           <Grid divided inverted stackable>
             <Grid.Row>
               <Grid.Column width={3}>
-                <Header inverted as='h4' content='Адрес' />
+                <Header size='medium' inverted as='h4' content='Адрес' />
                 <address>
                   Россия, 117303, г. Москва, ул. Керченская 1Б
                   <br />
@@ -236,7 +231,7 @@ function HomepageLayout({ isComputer }) {
                 </address>
               </Grid.Column>
               <Grid.Column width={3}>
-                <Header inverted as='h4' content='Информация' />
+                <Header size='medium' inverted as='h4' content='Информация' />
                 <List link inverted>
                   <List.Item as='a'>О нас</List.Item>
                   <List.Item>
@@ -277,7 +272,7 @@ function HomepageLayout({ isComputer }) {
                 </List>
               </Grid.Column>
               <Grid.Column width={3}>
-                <Header inverted as='h4' content='Блог' />
+                <Header size='medium' inverted as='h4' content='Блог' />
                 <List link inverted>
                   <List.Item as='a'>
                     <Icon name='instagram' size='large' />
@@ -307,7 +302,7 @@ function HomepageLayout({ isComputer }) {
                 </List>
               </Grid.Column>
               <Grid.Column width={7}>
-                <Header as='h4' inverted>
+                <Header as='h4' size='medium' inverted>
                   Остальное
                 </Header>
                 <p>

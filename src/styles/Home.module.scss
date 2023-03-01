@@ -278,6 +278,7 @@
 }
 
 .product {
+  font-family: Mon_Amour_One, Arial, sans-serif;
   overflow: hidden;
   position: relative;
   display: table-cell;
@@ -294,4 +295,8 @@
     height: 0;
     border-bottom: 0.05em dotted;
   }
+}
+
+.product + p {
+  font-family: Mon_Amour_One, Arial, sans-serif;
 }
