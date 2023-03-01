@@ -82,7 +82,7 @@ function HomepageLayout({ isComputer }) {
               >
                 О Ресторане
               </Header>
-              <p style={{ fontSize: '1.33em', textAlign: 'justify' }}>
+              <p style={{ fontSize: '1.33em', textAlign: 'start' }}>
                 Только у нас Вы сможете погрузиться в атмсоферу кулинарных
                 традиций одного из{' '}
                 <strong>Древних христианских городов Грузии</strong>. Трепетное
@@ -127,7 +127,8 @@ function HomepageLayout({ isComputer }) {
                   fontSize: '2em',
                 }}
               >
-                &quot;Хотелось бы вкусно и сытно поесть грузинской кухни&quot;
+                &quot;Хотелось бы вкусно и сытно поесть блюда грузинской
+                кухни&quot;
               </Header>
               <Icon size='big' bordered circular name='thumbs up outline' />
               <p style={{ fontSize: '1.33em' }}>
@@ -192,9 +193,7 @@ function HomepageLayout({ isComputer }) {
           >
             Афиша
           </Header>
-          <p
-            style={{ fontSize: '1.2em', color: 'white', textAlign: 'justify' }}
-          >
+          <p style={{ fontSize: '1.2em', color: 'white', textAlign: 'start' }}>
             Поддержанию приятной непринужденной атмосферы способствует музыка,
             <strong> исполненная вживую</strong>, самых разных направлений.
             Веселая озорная или мелодичная душевная - мы вместе с Вами подберем
