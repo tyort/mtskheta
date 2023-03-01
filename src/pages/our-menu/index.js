@@ -155,7 +155,7 @@ function OurMenu({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch data from external API
   const res = await fetch(`${process.env.BASE_FETCH_URL}/api/hello`);
   const data = await res.json();
