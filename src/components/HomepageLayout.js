@@ -1,18 +1,13 @@
-import React, { useState, Fragment } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 import {
   Button,
   Container,
   Grid,
-  Header,
-  Image as ImageUI,
-  List,
-  Segment,
-  Modal,
-  Icon,
-  Popup,
+  Header, Icon, Image as ImageUI,
+  List, Modal, Popup, Segment
 } from 'semantic-ui-react';
-import Image from 'next/image';
-import Link from 'next/link';
 import ResponsiveCarousel from './ResponsiveCarousel';
 import Specialties from './Specialities';
 import SpecialityDescription from './SpecialityDescription';
@@ -78,7 +73,7 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif !important',
+                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 О Ресторане
@@ -126,7 +121,7 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif !important',
+                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 &quot;Хотелось бы вкусно и сытно поесть грузинской кухни&quot;
@@ -141,7 +136,7 @@ function HomepageLayout({ isComputer }) {
                 as='h3'
                 style={{
                   fontSize: '2em',
-                  fontFamily: 'Arbor, Arial, sans-serif !important',
+                  fontFamily: 'Arbor, Arial, sans-serif',
                 }}
               >
                 &quot;Провести романтический вечер в компании живой музыки&quot;
@@ -161,7 +156,7 @@ function HomepageLayout({ isComputer }) {
           textAlign='center'
           style={{
             fontSize: '2em',
-            fontFamily: 'Arbor, Arial, sans-serif !important',
+            fontFamily: 'Arbor, Arial, sans-serif',
           }}
         >
           Популярные блюда
@@ -190,7 +185,7 @@ function HomepageLayout({ isComputer }) {
             style={{
               fontSize: '3em',
               color: 'white',
-              fontFamily: 'Arbor, Arial, sans-serif !important',
+              fontFamily: 'Arbor, Arial, sans-serif',
               textShadow:
                 '0.1rem -0.2rem 0.5rem #e25822, -0.2rem 0.2rem 0.2rem #e25822',
             }}

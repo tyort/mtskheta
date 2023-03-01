@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import { Button, Container, Header, Icon } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 function HomepageHeading() {
   return (
@@ -10,7 +9,7 @@ function HomepageHeading() {
         content='Мцхета'
         inverted
         style={{
-          fontFamily: 'Arbor, Arial, sans-serif !important',
+          fontFamily: 'Arbor, Arial, sans-serif',
           textShadow:
             '0.1rem -0.2rem 0.5rem #e25822, -0.1rem -0.2rem 0.3rem #e25822, 0px 0.2rem 0.2rem black',
         }}
@@ -20,7 +19,7 @@ function HomepageHeading() {
         content='Грузинские блюда в печи на дровах'
         inverted
         style={{
-          fontFamily: 'Arbor, Arial, sans-serif !important',
+          fontFamily: 'Arbor, Arial, sans-serif',
           textShadow:
             '3px -3px 4px black, -4px -2px 4px black, 4px 3px 2px black',
         }}

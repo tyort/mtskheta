@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import { Segment, Comment, Icon, Header } from 'semantic-ui-react';
+import { Comment, Header, Icon, Segment } from 'semantic-ui-react';
 import styles from '../../styles/Home.module.scss';
 
 function OurMenu({ data }) {
@@ -20,7 +19,7 @@ function OurMenu({ data }) {
         <Header
           textAlign='center'
           as='h2'
-          style={{ fontFamily: 'Mon_Amour_One, Arial, sans-serif !important' }}
+          style={{ fontFamily: 'Mon_Amour_One, Arial, sans-serif' }}
         >
           Какой-то хедер
         </Header>
@@ -39,7 +38,7 @@ function OurMenu({ data }) {
                   display: 'table',
                   borderCollapse: 'collapse',
                   width: '100%',
-                  fontFamily: 'Mon_Amour_One, Arial, sans-serif !important',
+                  fontFamily: 'Mon_Amour_One, Arial, sans-serif',
                 }}
               >
                 <p className={styles.product}>Хачапури по аджарски</p>
@@ -100,7 +99,7 @@ function OurMenu({ data }) {
                   display: 'table',
                   borderCollapse: 'collapse',
                   width: '100%',
-                  fontFamily: 'Mon_Amour_One, Arial, sans-serif !important',
+                  fontFamily: 'Mon_Amour_One, Arial, sans-serif',
                 }}
               >
                 <p className={styles.product}>Хачапури по аджарски</p>
