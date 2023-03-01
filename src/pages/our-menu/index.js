@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Comment,
   Header,
@@ -94,7 +95,9 @@ function OurMenu({ data }) {
       })}
       <Menu fixed='bottom' secondary style={{ justifyContent: 'center' }}>
         <Menu.Item>
-          <Button as='a' icon='home' inverted color='brown' href='/' />
+          <Link href='/'>
+            <Button icon='home' inverted color='brown' />
+          </Link>
         </Menu.Item>
       </Menu>
     </>

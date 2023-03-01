@@ -5,8 +5,13 @@ import {
   Button,
   Container,
   Grid,
-  Header, Icon, Image as ImageUI,
-  List, Modal, Popup, Segment
+  Header,
+  Icon,
+  Image as ImageUI,
+  List,
+  Modal,
+  Popup,
+  Segment,
 } from 'semantic-ui-react';
 import ResponsiveCarousel from './ResponsiveCarousel';
 import Specialties from './Specialities';
