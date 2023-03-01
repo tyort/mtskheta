@@ -222,12 +222,12 @@ export default function ResponsiveContainer() {
                   </Menu.Item>
                   <Menu.Item position='right'>
                     <Icon name='phone' />
-                    +7 (904) 315-72-77
+                    +7 (969) 270-00-06
                     <Button
                       as='a'
                       inverted
                       style={{ marginLeft: '0.5em' }}
-                      href='tel:+79043157277'
+                      href='tel:+79692700006'
                     >
                       Позвонить
                     </Button>

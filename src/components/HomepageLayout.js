@@ -250,7 +250,7 @@ function HomepageLayout({ isComputer }) {
                     <Link href='https://t.me/mtskhetarest'>
                       <Icon name='telegram plane' circular />
                     </Link>
-                    <Link href='tel:+79043157277'>
+                    <Link href='tel:+79692700006'>
                       <Icon name='phone' circular />
                     </Link>
                     <Link href='mailto:mcheta777@mail.ru'>
