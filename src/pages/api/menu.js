@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import menu from '../../libs/menu';
 
-export default function handler(req, res) {
-  res.status(200).json(menu);
+export default async function getData() {
+  const JSONData = JSON.stringify(menu);
+  return Promise.resolve(JSONData);
 }

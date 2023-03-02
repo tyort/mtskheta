@@ -17,7 +17,8 @@
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23",
     "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^2.1.4"
+    "semantic-ui-react": "^2.1.4",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",

@@ -9,6 +9,7 @@ import {
   Button,
 } from 'semantic-ui-react';
 import styles from '../../styles/Home.module.scss';
+import getData from '../api/menu';
 
 function OurMenu({ data }) {
   return (
@@ -106,9 +107,8 @@ function OurMenu({ data }) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`${process.env.BASE_FETCH_URL}/api/menu`);
-  const data = await res.json();
-
+  const res = await getData();
+  const data = JSON.parse(res);
   // Pass data to the page via props
   return { props: { data } };
 }
